@@ -16,7 +16,7 @@
 }
 
 .bg-gray{
-  background-color: #111827 !important;
+  background-color: #000 !important;
 }
 
 html,
@@ -32,7 +32,7 @@ body {
   line-height: 24px;
 
   color: $white;
-  background-color: #111827;
+  background-color: #000;
 }
 
 h1,
@@ -72,8 +72,13 @@ h2 {
 }
 
 h3 {
+  color: #F7EBDF;
   font-size: 24px;
   line-height: 30px;
+}
+
+h3 > a {
+  color: #F7EBDF;
 }
 
 h4 {
@@ -82,6 +87,7 @@ h4 {
 }
 
 h5 {
+  color: #F7EBDF;
   font-size: 14px;
   line-height: 18px;
 }
@@ -1353,7 +1359,7 @@ input {
   height: 45px;
   padding-left: 10px;
 
-  color: #333;
+ color: #94624A;
   border: 2px solid #eceff8;
   background: #eceff8;
   box-shadow: none;
@@ -1364,7 +1370,7 @@ select {
 
   width: 100%;
 
-  color: #333;
+ color: #94624A;
   border: 0 solid #eceff8;
   background: transparent;
   box-shadow: none;
@@ -1564,7 +1570,7 @@ textarea:focus {
   .mobile-menu-area {
     &.white-mobile-menu {
       a.meanmenu-reveal {
-        color: #333;
+       color: #94624A;
         border: 1px solid #333;
         span {
           background-color: #333;
@@ -1937,4 +1943,8 @@ a.default-btn {
 
 .bg-black-3 {
   background-color: #202022;
+}
+
+span{
+  color: #cc946c
 }

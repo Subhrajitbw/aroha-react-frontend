@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap, Power3 } from "gsap";
 import { Link } from "react-router-dom";
 
 const BlogSidebar = () => {
+  useEffect(() => {
+    // Animate the entire sidebar on mount
+    gsap.from(".sidebar-style", {
+      opacity: 0,
+      x: -20,
+      duration: 1, // Slower animation
+      ease: Power3.easeOut, // Smoother easing
+    });
+
+    // Animate the search bar
+    gsap.from(".pro-sidebar-search", {
+      opacity: 0,
+      y: -20,
+      duration: 0.8, // Slower animation
+      ease: Power3.easeOut, // Smoother easing
+      delay: 0.4, // Delayed start
+    });
+
+    // Animate recent projects with stagger effect
+    gsap.from(".single-sidebar-blog", {
+      opacity: 0,
+      y: 20,
+      stagger: 0.3, // Slower stagger
+      duration: 1, // Slower animation
+      ease: Power3.easeOut, // Smoother easing
+      delay: 0.6, // Delayed start
+    });
+
+    // Animate Categories and Tags
+    gsap.from(".sidebar-widget", {
+      opacity: 0,
+      y: 20,
+      stagger: 0.3, // Slower stagger
+      duration: 1, // Slower animation
+      ease: Power3.easeOut, // Smoother easing
+      delay: 0.8, // Delayed start
+    });
+  }, []);
+
+
   return (
     <div className="sidebar-style">
       <div className="sidebar-widget">
@@ -33,7 +74,7 @@ const BlogSidebar = () => {
               <span>Photography</span>
               <h4>
                 <Link to={process.env.PUBLIC_URL + "/blog-details-standard"}>
-                  T- Shart And Jeans
+                  T- Shirt And Jeans
                 </Link>
               </h4>
             </div>
@@ -53,7 +94,7 @@ const BlogSidebar = () => {
               <span>Branding</span>
               <h4>
                 <Link to={process.env.PUBLIC_URL + "/blog-details-standard"}>
-                  T- Shart And Jeans
+                  T- Shirt And Jeans
                 </Link>
               </h4>
             </div>
@@ -73,7 +114,7 @@ const BlogSidebar = () => {
               <span>Design</span>
               <h4>
                 <Link to={process.env.PUBLIC_URL + "/blog-details-standard"}>
-                  T- Shart And Jeans
+                  T- Shirt And Jeans
                 </Link>
               </h4>
             </div>
@@ -93,7 +134,7 @@ const BlogSidebar = () => {
               <span>Photography</span>
               <h4>
                 <Link to={process.env.PUBLIC_URL + "/blog-details-standard"}>
-                  T- Shart And Jeans
+                  T- Shirt And Jeans
                 </Link>
               </h4>
             </div>

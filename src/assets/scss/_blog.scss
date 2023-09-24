@@ -57,7 +57,7 @@
       margin: -64px 0 0;
       padding: 14px 44px;
 
-      background-color: #fff;
+      background-color: #94624A;
       @media #{$lg-layout} {
         margin: -50px 0 0;
         padding: 14px 30px;
@@ -83,11 +83,11 @@
       span {
         font-style: italic;
 
-        color: #666;
+        color: #F7EBDF;
         a {
-          color: #666;
+          color: #e6c9b3;
           &:hover {
-            color: $theme-color;
+            color: #e6c9b3;
           }
         }
       }
@@ -178,7 +178,7 @@
           letter-spacing: 1px;
           text-transform: uppercase;
 
-          color: #333;
+         color: #94624A;
           &::before {
             position: absolute;
             top: 6px;
@@ -210,7 +210,7 @@
 
       margin: 10px 0 20px;
 
-      color: #333;
+     color: #94624A;
       @media #{$lg-layout} {
         font-size: 19px;
       }
@@ -223,7 +223,7 @@
         margin: 10px 0 12px;
       }
       a {
-        color: #333;
+       color: #94624A;
         &:hover {
           color: $theme-color;
         }
@@ -232,7 +232,7 @@
     p {
       margin: 0;
 
-      color: #666;
+      color: #cc946c;
     }
     .blog-share-comment {
       display: flex;
@@ -254,7 +254,7 @@
           letter-spacing: 0.2px;
           text-transform: capitalize;
 
-          color: #333;
+         color: #94624A;
           &:hover {
             color: $theme-color;
           }
@@ -272,7 +272,7 @@
 
           text-transform: capitalize;
 
-          color: #333;
+         color: #94624A;
         }
         .share-social {
           display: inline-block;

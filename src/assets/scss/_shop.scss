@@ -26,14 +26,14 @@
         min-width: 143px;
         padding: 5px;
 
-        color: #606060;
+        color: #f7ebdf;
         border: 1px solid #e6e6e6;
       }
     }
     p {
       margin: 0;
 
-      color: #606060;
+      color: #f7ebdf;
       @media #{$xs-layout} {
         margin: 5px 0 10px;
       }
@@ -50,7 +50,7 @@
       margin-left: 20px;
       padding: 0;
 
-      color: #606060;
+      color: #f7ebdf;
       border: none;
       background: none;
       &:first-child {
@@ -111,7 +111,7 @@
 
         display: inline-block;
 
-        color: #fe5252;
+        color: #f7ebdf;
         &.old {
           font-size: 18px;
 
@@ -134,7 +134,7 @@
 
           color: #5f5d5d;
           &.yellow {
-            color: #ffa900;
+            color: #cc946c;
           }
         }
       }
@@ -167,7 +167,7 @@
 
       margin: 15px 0 40px;
 
-      color: #8f8f8f;
+      color: #e6c9b3;
       @media #{$xs-layout} {
         margin: 12px 0 20px;
       }
@@ -195,7 +195,7 @@
 
         color: #fff;
         border: 1px solid transparent;
-        background-color: #343538;
+        background-color: #94624a;
         @media #{$xs-layout} {
           font-size: 13px;
 

@@ -1,10 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import MobileMenuSearch from "./sub-components/MobileSearch";
 import MobileNavMenu from "./sub-components/MobileNavMenu";
 import MobileLangCurChange from "./sub-components/MobileLangCurrChange";
 import MobileWidgets from "./sub-components/MobileWidgets";
+import { motion } from "framer-motion/dist/framer-motion";
 
 const MobileMenu = () => {
+  const mobileMenuRef = useRef(null);
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const slideInVariants = {
+    hidden: { x: "100%" },
+    visible: { x: "0%", transition: { duration: 0.5 } },
+  };
+
+  const slideInFromTopVariants = {
+    hidden: { y: "-100%" },
+    visible: { y: "0%", transition: { duration: 0.5 } },
+  };
+
   useEffect(() => {
     const offCanvasNav = document.querySelector("#offcanvas-navigation");
     const offCanvasNavSubMenu = offCanvasNav.querySelectorAll(".sub-menu");
@@ -18,10 +32,9 @@ const MobileMenu = () => {
     }
 
     const menuExpand = offCanvasNav.querySelectorAll(".menu-expand");
-    const numMenuExpand = menuExpand.length;
 
-    for (let i = 0; i < numMenuExpand; i++) {
-      menuExpand[i].addEventListener("click", e => {
+    for (let i = 0; i < menuExpand.length; i++) {
+      menuExpand[i].addEventListener("click", (e) => {
         sideMenuExpand(e);
       });
     }
@@ -31,9 +44,26 @@ const MobileMenu = () => {
         closeMobileMenu();
       });
     }
-  });
+  }, []);
 
-  const sideMenuExpand = e => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          // Mobile menu is in the viewport, start animating elements
+          setMenuVisible(true);
+        }
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    // Observe the mobile menu element when it becomes available
+    if (mobileMenuRef.current) {
+      observer.observe(mobileMenuRef.current);
+    }
+  }, []);
+
+  const sideMenuExpand = (e) => {
     e.currentTarget.parentElement.classList.toggle("active");
   };
 
@@ -42,10 +72,15 @@ const MobileMenu = () => {
       "#offcanvas-mobile-menu"
     );
     offcanvasMobileMenu.classList.remove("active");
+    setMenuVisible(false);
   };
 
   return (
-    <div className="offcanvas-mobile-menu" id="offcanvas-mobile-menu">
+    <div
+      className={`offcanvas-mobile-menu ${menuVisible ? "active" : ""}`}
+      id="offcanvas-mobile-menu"
+      ref={mobileMenuRef}
+    >
       <button
         className="offcanvas-menu-close"
         id="mobile-menu-close-trigger"
@@ -54,19 +89,28 @@ const MobileMenu = () => {
         <i className="pe-7s-close"></i>
       </button>
       <div className="offcanvas-wrapper">
-        <div className="offcanvas-inner-content">
-          {/* mobile search */}
-          <MobileMenuSearch />
-
+        <MobileMenuSearch />
+        <motion.div
+          className="offcanvas-inner-content"
+          initial="hidden"
+          animate={menuVisible ? "visible" : "hidden"}
+          variants={slideInVariants}
+        >
           {/* mobile nav menu */}
-          <MobileNavMenu />
-
-          {/* mobile language and currency */}
-          <MobileLangCurChange />
-
+          <motion.div
+            className="menu-content"
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+          >
+            <MobileNavMenu />
+          </motion.div>
           {/* mobile widgets */}
-          <MobileWidgets />
-        </div>
+          <motion.div
+            className="menu-content align-bottom"
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+          >
+            <MobileWidgets className="align-bottom" />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

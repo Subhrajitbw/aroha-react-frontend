@@ -2,7 +2,7 @@ import React from "react";
 
 const MobileWidgets = () => {
   return (
-    <div className="offcanvas-widget-area">
+    <div className="offcanvas-widget-area align-bottom">
       <div className="off-canvas-contact-widget">
         <div className="header-contact-info">
           <ul className="header-contact-info__list">

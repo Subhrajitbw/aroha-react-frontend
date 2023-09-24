@@ -29,7 +29,7 @@
   animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
 
   border-bottom: 0 solid #4a90e2;
-  background-color: #111827;
+  background-color: #000;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.06);
 
   .center-menu-logo {
@@ -187,7 +187,7 @@
               text-align: left;
               text-transform: capitalize;
 
-              color: #333;
+              color: #F7EBDF;
               &:hover {
                 color: $theme-color;
               }
@@ -716,7 +716,7 @@
 
               color: $theme-color;
               &:hover {
-                color: #333;
+               color: #94624A;
               }
             }
           }
@@ -1455,7 +1455,7 @@
                   text-align: left;
                   text-transform: capitalize;
 
-                  color: #333;
+                 color: #94624A;
                   &:hover {
                     color: $theme-color;
                   }
@@ -1513,7 +1513,7 @@
           letter-spacing: 0.8px;
           text-transform: capitalize;
 
-          color: #000000;
+          color: #F7EBDF;
           @media #{$xl-layout} {
             font-size: 16px;
           }
@@ -1722,7 +1722,7 @@
           &.facebook {
             color: #F7EBDF;
             &:hover {
-              color: #333;
+             color: #94624A;
             }
           }
           &.dribbble {
@@ -2073,7 +2073,7 @@
 }
 
 .offcanvas-widget-area {
-  margin-top: auto;
+  margin-top: 60%;
   margin-bottom: 35px;
 
   @media #{$sm-layout} {
@@ -2251,7 +2251,7 @@
 .offcanvas-inner-content {
   display: flex;
   flex-direction: column;
-
+  vertical-align: middle;
   height: 100%;
   padding: 90px 35px 0;
 
@@ -2290,7 +2290,7 @@
 
         display: block;
 
-        padding: 10px 0;
+        padding: 20px 0;
 
         color: #F7EBDF;
         &:hover {

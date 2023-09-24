@@ -52,7 +52,7 @@
           letter-spacing: 1px;
           text-transform: uppercase;
 
-          color: #333;
+         color: #94624A;
           &::before {
             position: absolute;
             top: 6px;
@@ -70,7 +70,7 @@
             display: none;
           }
           a {
-            color: #333;
+           color: #94624A;
             &:hover {
               color: $theme-color;
             }
@@ -106,7 +106,7 @@
 
       margin: 25px 0 26px;
 
-      color: #333;
+     color: #94624A;
       @media #{$lg-layout} {
         font-size: 17px;
       }
@@ -310,7 +310,7 @@
         margin-bottom: 30px;
         padding-left: 20px;
 
-        color: #333;
+       color: #94624A;
         border: 1px solid #eaeaea;
         background: transparent none repeat scroll 0 0;
         box-shadow: none;
@@ -323,7 +323,7 @@
         padding-top: 20px;
         padding-left: 20px;
 
-        color: #333;
+       color: #94624A;
         border: 1px solid #eaeaea;
         background: transparent none repeat scroll 0 0;
         box-shadow: none;

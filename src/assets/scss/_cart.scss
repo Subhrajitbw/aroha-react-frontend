@@ -31,7 +31,7 @@ h3.cart-page-title {
         white-space: nowrap;
         text-transform: uppercase;
 
-        color: #333;
+       color: #94624A;
         border-top: medium none;
         @media #{$lg-layout} {
           padding: 21px 35px 22px;
@@ -54,7 +54,7 @@ h3.cart-page-title {
           font-size: 15px;
           font-weight: 500;
 
-          color: #333;
+         color: #94624A;
           &:hover {
             color: $theme-color;
           }
@@ -65,20 +65,20 @@ h3.cart-page-title {
         span {
           font-weight: 500;
 
-          color: #333;
+         color: #94624A;
           &.old {
             margin-right: 10px;
 
             text-decoration: line-through;
 
-            color: #8e8e8e;
+            color: #e6c9b3;
           }
         }
       }
       td.product-subtotal {
         font-weight: 500;
 
-        color: #333;
+       color: #94624A;
       }
       td.product-quantity {
         width: 435px;
@@ -104,7 +104,7 @@ h3.cart-page-title {
             transition: all 0.3s ease 0s;
             text-align: center;
 
-            color: #333;
+           color: #94624A;
             border: none;
             background: none;
           }
@@ -136,7 +136,7 @@ h3.cart-page-title {
 
             text-align: center;
 
-            color: #333;
+           color: #94624A;
             border: 1px solid #e1e1e1;
             background: transparent none repeat scroll 0 0;
           }
@@ -150,7 +150,7 @@ h3.cart-page-title {
 
           margin: 0 13px;
 
-          color: #666;
+          color: #cc946c;
           border: none;
           background: none;
           &:hover {
@@ -191,7 +191,7 @@ h3.cart-page-title {
 
         text-align: center;
 
-        color: #333;
+       color: #94624A;
       }
     }
   }

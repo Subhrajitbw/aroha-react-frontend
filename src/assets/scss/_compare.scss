@@ -100,7 +100,7 @@
                 background-color: $theme-color;
                 padding: 10px 15px;
                 border-radius: 50px;
-                color: #fff;
+                color: #f7ebdf;
                 display: inline-block;
                 border: none;
                 &:hover,
@@ -115,7 +115,7 @@
                 &.disabled {
                   opacity: 0.3;
                   &:hover {
-                    background-color: #343538;
+                    background-color: #94624a;
                   }
                 }
               }
@@ -131,13 +131,13 @@
           &.product-price {
             font-size: 14px;
             font-weight: 400;
-            color: #343538;
+            color: #94624a;
 
             .amount {
               &.old {
                 text-decoration: line-through;
                 margin-right: 10px;
-                color: #8e8e8e;
+                color: #e6c9b3;
               }
             }
           }
@@ -154,11 +154,11 @@
 
           &.product-rating {
             i {
-              color: #343538;
+              color: #94624a;
               margin-right: 5px;
 
               &.yellow {
-                color: #ffa900;
+                color: #cc946c;
               }
             }
           }
