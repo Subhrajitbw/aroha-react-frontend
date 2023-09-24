@@ -444,6 +444,18 @@
   }
 }
 
+.modal-open > :not(.modal) {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.modal-backdrop {
+  background-color: #000;
+}
+
 .modal-dialog {
   width: 960px;
   max-width: 960px;
@@ -461,9 +473,12 @@
   .modal-header {
     .close {
       cursor: pointer;
-
       opacity: 1;
-     color: #94624A;
+      color: #000 !important;
+      span{
+        color: #cc946c;
+        border: none;
+      }
       &:hover {
         color: $theme-color;
       }
@@ -507,7 +522,7 @@
 
     margin: 0 0 0;
 
-    color: #010101;
+    color: #CC946C;
   }
   .product-details-price {
     display: flex;
@@ -517,7 +532,7 @@
     span {
       font-size: 24px;
 
-      color: #f7ebdf;
+      color: #94624A;
       &.old {
         font-size: 18px;
 
@@ -3814,6 +3829,9 @@
 }
 
 .product-quickview-modal-wrapper {
+  .modal-content {
+    background-color: #000;
+  }
   .modal-dialog {
     margin: 5% auto;
     padding: 0;
