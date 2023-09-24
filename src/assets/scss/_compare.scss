@@ -54,9 +54,10 @@
                 padding: 0;
                 i {
                   font-size: 25px;
+                  color: $theme-color
                 }
                 &:hover {
-                  color: red;
+                  color: #cc946c;
                 }
               }
             }
